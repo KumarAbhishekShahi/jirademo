@@ -29,15 +29,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    #- name: Jira TODO
-    #  uses: atlassian/gajira-todo@master
-    #  with:
-    #    project: DBDEM
-    #    issuetype: Task
-    #    description: Created automatically via GitHub Actions
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     - name: Transition issue
       uses: atlassian/gajira-transition@master
       with:
@@ -52,3 +43,14 @@ jobs:
         description: Created automatically via GitHub Actions
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Find in commit messages
+      uses: atlassian/gajira-find-issue-key@master
+      with:
+        from: commits
+
+    - name: Comment on issue
+      uses: atlassian/gajira-comment@master
+      with:
+        issue: ${{ steps.create.outputs.issue }}
+        comment: Hello from GitHub actions
