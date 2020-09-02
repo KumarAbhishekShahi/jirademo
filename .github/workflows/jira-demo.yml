@@ -8,10 +8,8 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-
-
-    - name: Rest API Call
-      uses: jirikuncar/recorder
+    - name: REST Recorder
+      uses: jirikuncar/recorder@v1
       with:
         endpoint: https://reqres.in/api/users?page=2
         jq: '.[0]'
