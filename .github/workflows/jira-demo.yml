@@ -53,5 +53,5 @@ jobs:
       id: issueid
       uses: atlassian/gajira-comment@master
       with:
-        issue: ${{ steps.issueid.outputs.issue }}
+        issue: ${{ steps.issueid.outputs.issueKey }}
         comment: Hello from GitHub actions 
