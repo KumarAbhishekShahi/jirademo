@@ -28,3 +28,13 @@ jobs:
         description: Created automatically via GitHub Actions
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Jira TODO
+      uses: atlassian/gajira-todo@master
+      with:
+        project: DBDEM
+        issuetype: Task
+        summary: this is a sample TODO issue
+        description: Created automatically via GitHub Actions
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
