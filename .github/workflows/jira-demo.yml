@@ -24,6 +24,7 @@ jobs:
       with:
         project: DBDEM
         issuetype: Task
+        summary: this is a sample issue
         description: Created automatically via GitHub Actions
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
