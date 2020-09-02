@@ -21,7 +21,7 @@ jobs:
     - name: Create TODO
       uses: atlassian/gajira-todo@master
       with:
-        project: dbdemo
+        project: GA
         issuetype: Task
         description: Created automatically via GitHub Actions
       env:
