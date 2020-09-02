@@ -15,7 +15,7 @@ public class SampleApplication {
 		SpringApplication.run(SampleApplication.class, args);
 	}
 	@RequestMapping(value = "/")
-	// TODO: refactor this callback mess
+	# TODO: rewrite api client
 	public String hello() {
 	   return "Hello World";
 	}
