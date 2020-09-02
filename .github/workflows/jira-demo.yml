@@ -19,7 +19,7 @@ jobs:
         JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
 
     - name: Create TODO
-      uses: atlassian/gajira-todo@master
+      uses: atlassian/gajira-todo@v1.0.0
       with:
         project: GA
         issuetype: Task
