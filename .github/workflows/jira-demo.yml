@@ -29,12 +29,17 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Jira TODO
-      uses: atlassian/gajira-todo@master
+    #- name: Jira TODO
+    #  uses: atlassian/gajira-todo@master
+    #  with:
+    #    project: DBDEM
+    #    issuetype: Task
+    #    description: Created automatically via GitHub Actions
+    #  env:
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Transition issue
+      uses: atlassian/gajira-transition@master
       with:
-        project: DBDEM
-        issuetype: Task
-        summary: this is a sample TODO issue
-        description: Created automatically via GitHub Actions
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        issue: ${{ steps.create.outputs.issue }}
+        transition: "In progress"
