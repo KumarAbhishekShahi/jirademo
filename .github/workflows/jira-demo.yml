@@ -22,7 +22,7 @@ jobs:
       id: create
       uses: atlassian/gajira-create@master
       with:
-        project: dbdemo
+        project: DBDEM
         issuetype: Task
         description: Created automatically via GitHub Actions
       env:
