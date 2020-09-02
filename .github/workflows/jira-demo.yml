@@ -50,7 +50,8 @@ jobs:
         from: commits
 
     - name: Comment on issue
+      id: issueid
       uses: atlassian/gajira-comment@master
       with:
-        issue: ${{ steps.create.outputs.issue }}
+        issue: ${{ steps.issueid.outputs.issue }}
         comment: Hello from GitHub actions
