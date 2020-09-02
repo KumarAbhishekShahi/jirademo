@@ -45,13 +45,13 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Find in commit messages
+      id: issueid    
       uses: atlassian/gajira-find-issue-key@master
       with:
         from: commits
 
     - name: Comment on issue
-      id: issueid
       uses: atlassian/gajira-comment@master
       with:
-        issue: ${{ steps.issueid.outputs.issueKey }}
+        issue: ${{ steps.issueid.outputs.issue }}
         comment: Hello from GitHub actions 
