@@ -15,7 +15,7 @@ public class SampleApplication {
 		SpringApplication.run(SampleApplication.class, args);
 	}
 	@RequestMapping(value = "/")
-	//TODO 
+	//TODO Create
 	public String hello() {
 	   return "Hello World";
 	}
