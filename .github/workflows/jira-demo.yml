@@ -21,3 +21,9 @@ jobs:
     - name: Create new issue
       id: create
       uses: atlassian/gajira-create@master
+      with:
+        project: dbdemo
+        issuetype: Task
+        description: Created automatically via GitHub Actions
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
