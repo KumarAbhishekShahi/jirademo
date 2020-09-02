@@ -12,7 +12,7 @@ jobs:
       uses: jirikuncar/recorder@v1
       with:
         endpoint: https://reqres.in/api/users?page=2
-        jq: '.[0]'
+        jq: '.per_page'
     - run: echo -e "${{ steps.stars.outputs.response }}"
 
         
