@@ -16,27 +16,28 @@ jobs:
     - name: Create JIRA Issue
       run: |
         curl --request POST --url 'https://kumar-shahi.atlassian.net/rest/api/3/issue' --user 'abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93' --header 'Accept: application/json' --header 'Content-Type: application/json' \
-        --data '"fields": {
-        "summary": "Summit 2019 is awesome!",
-        "issuetype": {
-            "id": "10009"
-        },
-        "project": {
-            "key": "DBDEM"
-        },
-        "description": {
-            "type": "doc",
-            "version": 1,
-            "content": [
-                {
-                "type": "paragraph",
-                "content": [
-                    {
-                    "text": "This is the description.",
-                    "type": "text"
-                    }
-                ]
-                }
-             ]
-            }
-          }'
+        --data \
+        '"fields": {\
+                "summary": "Summit 2019 is awesome!",
+                "issuetype": {\
+                    "id": "10009"\
+                },\
+                "project": {\
+                    "key": "DBDEM"\
+                },\
+                "description": {\
+                    "type": "doc",\
+                    "version": 1,\
+                    "content": [\
+                      {\
+                      "type": "paragraph",\
+                      "content": [\
+                         {\
+                         "text": "This is the description.",\
+                         "type": "text"\
+                         }\
+                      ]\
+                    }\
+                  ]\
+                }\
+              }'
