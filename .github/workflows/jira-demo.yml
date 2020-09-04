@@ -11,4 +11,4 @@ jobs:
     - name: Get Project ID and Name from JIRA
       id: stars
       run: curl --request GET --url 'https://kumar-shahi.atlassian.net/rest/api/3/search?jql=' --user 'abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93' --header 'Accept:application/json'
-    - run: echo -e "${{ steps.stars.outputs.response }}"
+    - run: echo -e "${{ steps.stars.output }}"
