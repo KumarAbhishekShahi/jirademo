@@ -1,3 +1,13 @@
+on:
+  push
+
+name: JIRA Cloud Using Actions
+
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
     - name: Checkout
       uses: actions/checkout@master
 
