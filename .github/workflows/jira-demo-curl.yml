@@ -14,4 +14,4 @@ jobs:
     - run: echo -e ${{ steps.stars.outputs.response }}
 
     - name: Create JIRA Issue
-      run: curl --request POST --url 'https://kumar-shahi.atlassian.net/rest/api/3/issue' --user 'abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93' --header 'Accept:application/json' --header 'Content-Type:application/json' --data '{"fields":{"project":{"key":"DBDEM"},"summary":"somethings wrong","issuetype":{"id":"1"}}}'
+      run: curl --request POST --url 'https://kumar-shahi.atlassian.net/rest/api/3/issue' --user 'abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93' --header 'Accept:application/json' --header 'Content-Type:application/json' --data '{"fields":{"project":{"key":"DBDEM"},"summary":"somethings wrong","issuetype":{"name":"Story"}}}'
