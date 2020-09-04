@@ -22,7 +22,7 @@ jobs:
             "id": "10009"
         },
         "project": {
-            "key": "TEST"
+            "key": "DBDEM"
         },
         "description": {
             "type": "doc",
