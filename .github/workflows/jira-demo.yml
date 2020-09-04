@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Get Project ID and Name from JIRA
       id: stars
-      run: echo '::set-output name=response::(curl --request GET --url https://kumar-shahi.atlassian.net/rest/api/3/project/search --user abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93 --header Accept:application/json)' | jq '.values[0].key'
+      run: curl --request GET --url 'https://kumar-shahi.atlassian.net/rest/api/3/project/search' --user 'abhishek.shahi@gmail.com:QApj2spS9OhiGpXv1GKuDD93' --header 'Accept:application/json' | jq '.values[0].key' | echo 'set-output name=response::DBDEM'
     - run: echo -e "${{ steps.stars.outputs.response }}"
